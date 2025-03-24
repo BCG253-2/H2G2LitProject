@@ -30,27 +30,42 @@ body {
     overflow: hidden;
 }
 
-/* Adding geometry for 3D look using pseudo-elements for padding effect */
+/* 3D Corner Objects */
 .gameboy-container::before,
-.gameboy-container::after {
+.gameboy-container::after,
+.gameboy-container .corner-top-left,
+.gameboy-container .corner-top-right,
+.gameboy-container .corner-bottom-left,
+.gameboy-container .corner-bottom-right {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     background: #8c8c8c;  /* Same grey-green as the GameBoy body */
-    border-radius: 25px;
-    z-index: -1;
+    border-radius: 50%;
     box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2);  /* Inner shadow to give the padding effect */
+    z-index: -1;
 }
 
-.gameboy-container::before {
-    top: -15px;
-    left: -15px;
+/* Positioning the extra corner elements outside the GameBoy */
+.gameboy-container .corner-top-left {
+    top: -10px;
+    left: -10px;
 }
 
-.gameboy-container::after {
-    bottom: -15px;
-    right: -15px;
+.gameboy-container .corner-top-right {
+    top: -10px;
+    right: -10px;
+}
+
+.gameboy-container .corner-bottom-left {
+    bottom: -10px;
+    left: -10px;
+}
+
+.gameboy-container .corner-bottom-right {
+    bottom: -10px;
+    right: -10px;
 }
 
 /* Screen */
@@ -82,14 +97,14 @@ body {
 .button {
     width: 220px;
     height: 60px;
-    background: #1520A6;  /* Pastel grey-green for main button */
+    background: #4f83cc;  /* Blue for the button */
     border-radius: 12px;
     border: none;
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    color: #FFFFFF;  /* White */
+    color: #fff;  /* White text */
     transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -117,14 +132,14 @@ body {
 .small-button {
     width: 100px;
     height: 45px;
-    background: #ff9db5;  /* Pastel pink */
+    background: #4f83cc;  /* Blue for smaller buttons */
     border-radius: 12px;
     border: none;
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
-    color: #5b7746;  /* Dark pastel green */
+    color: #fff;  /* White text */
     transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
