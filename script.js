@@ -19,4 +19,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const randomKey = Object.keys(entries)[Math.floor(Math.random() * Object.keys(entries).length)];
         entryContent.innerHTML = `<p>${entries[randomKey]}</p>`;
     });
+
+    // Glowing button hover effects
+    const body = document.querySelector('body');
+    const modeSwitch = () => {
+        if (body.classList.contains('darkMode')) {
+            body.classList.remove('darkMode');
+            body.classList.add('lightMode');
+        } else {
+            body.classList.remove('lightMode');
+            body.classList.add('darkMode');
+        }
+    };
+
+    // Toggle between modes (light and dark)
+    setInterval(modeSwitch, 10000); // Switch every 10 seconds
 });
