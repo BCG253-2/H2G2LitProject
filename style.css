@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('space-background.jpg') no-repeat center center/cover;
+    background-color: black;  /* Change to black background */
     color: #ffcc00;
     font-family: 'Press Start 2P', sans-serif;
     display: flex;
