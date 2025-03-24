@@ -1,19 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const screen = document.querySelector(".screen");
-    const buttons = document.querySelectorAll(".button");
+// Function to navigate to different pages when a button is clicked
+function navigateTo(page) {
+    window.location.href = page;
+}
 
-    const messages = [
-        "DON'T PANIC!",
-        "42",
-        "Mostly Harmless",
-        "Life, the Universe, and Everything",
-        "So long, and thanks for all the fish!"
-    ];
+// Adding animation effects to buttons on click
+const buttons = document.querySelectorAll('.button');
 
-    buttons.forEach((button, index) => {
-        button.addEventListener("click", function () {
-            screen.textContent = messages[index % messages.length];
-            screen.style.color = ["red", "green", "blue", "yellow", "purple"][index % 5];
-        });
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Add an animation class or effect
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            button.style.transform = 'scale(1)';
+        }, 150); // Reset animation after 150ms
     });
 });
+
+// Example of dynamic updates to the screen
+function updateScreenText(text) {
+    const screenText = document.getElementById('screen-text');
+    screenText.textContent = text;
+}
+
+// You could call this to update the screen text when certain conditions are met
+// Example usage: updateScreenText("Loading next page...");
