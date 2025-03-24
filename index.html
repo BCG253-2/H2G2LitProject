@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hitchhiker's Guide to the Galaxy</title>
+    <title>The Hitchhiker's Guide</title>
     <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>The Hitchhiker's Guide to the Galaxy</h1>
-        <p id="guideIntro">Welcome to the Guide!</p>
-    </header>
-    <div id="entries">
-        <button id="vogonPoetry">Vogon Poetry</button>
-        <button id="holomail">HoloMail</button>
-        <button id="philosophy">Philosophy</button>
-        <button id="news">News</button>
-        <button id="randomEntry">Random Entry</button>
+    <div class="gameboy-container">
+        <div class="screen">
+            <p id="screen-text">DON'T PANIC!</p>
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="navigateTo('vogon.html')">Vogon Poetry</button>
+            <button class="button" onclick="navigateTo('holomail.html')">HoloMail</button>
+            <button class="button" onclick="navigateTo('philosophy.html')">Philosophy</button>
+            <button class="button" onclick="navigateTo('news.html')">News</button>
+        </div>
     </div>
-    <div id="entryContent"></div>
-    <script src="script.js"></script>
 </body>
 </html>
