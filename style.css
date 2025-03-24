@@ -9,6 +9,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url('https://cdn.wccftech.com/wp-content/uploads/2016/09/spacee-scaled.jpg'); /* Replace with actual space image URL */
+    background-size: cover;
+    background-position: center;
 }
 
 /* GameBoy-style Guide Container */
@@ -16,13 +19,38 @@ body {
     width: 380px;
     height: 650px;
     background: #8c8c8c;  /* Soft grey with a hint of green */
-    border-radius: 20px;  /* Adding padding around the corners with rounded edges */
+    border-radius: 20px;  /* Rounded edges */
     border: 10px solid #e60012;  /* Red outline */
-    padding: 20px;  /* Padding to ensure content is not right at the edges */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.6);
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.6);  /* Outer shadow to simulate 3D depth */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding geometry for 3D look using pseudo-elements for padding effect */
+.gameboy-container::before,
+.gameboy-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #8c8c8c;  /* Same grey-green as the GameBoy body */
+    border-radius: 25px;
+    z-index: -1;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2);  /* Inner shadow to give the padding effect */
+}
+
+.gameboy-container::before {
+    top: -15px;
+    left: -15px;
+}
+
+.gameboy-container::after {
+    bottom: -15px;
+    right: -15px;
 }
 
 /* Screen */
