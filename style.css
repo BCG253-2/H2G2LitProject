@@ -82,14 +82,14 @@ body {
 .button {
     width: 220px;
     height: 60px;
-    background: #8c8c8c;  /* Pastel grey-green for main button */
+    background: #1520A6;  /* Pastel grey-green for main button */
     border-radius: 12px;
     border: none;
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    color: #5b7746;  /* Dark pastel green */
+    color: #FFFFFF;  /* White */
     transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
