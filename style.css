@@ -15,7 +15,7 @@ body {
 .gameboy-container {
     width: 380px;
     height: 650px;
-    background: #a6d8d6;  /* Soft pastel blue-green */
+    background: #82A67D;  /* Soft pastel blue-green */
     border-radius: 30px 30px 50px 50px;  /* More geometric, angled corners */
     border: 8px solid #d8a6c7;  /* Pastel pink border */
     box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.6);
