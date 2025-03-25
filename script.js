@@ -1,6 +1,6 @@
 // Function to navigate to different pages when a button is clicked
 function navigateTo(page) {
-    window.location.href = page;
+    window.location.href = page + ".html";
 }
 
 // Adding animation effects to buttons on click
