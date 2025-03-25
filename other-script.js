@@ -1,23 +1,24 @@
-function expandContent() {
+function expandGif() {
+    const preview = document.getElementById("gif-preview");
+    const fullGif = document.getElementById("full-gif");
     const screen = document.querySelector(".screen");
-    const fullContent = document.getElementById("full-content");
-    const preview = document.getElementById("content-preview");
 
-    preview.style.display = "none"; // Hide preview
-    screen.classList.add("expanded"); // Expand the GameBoy screen
+    preview.style.display = "none"; // Hide the small preview
+    screen.classList.add("expanded"); // Expand the screen
     setTimeout(() => {
-        fullContent.classList.add("show-content"); // Show full content after a slight delay
+        fullGif.style.display = "block";
+        fullGif.classList.add("show-content"); // Show full GIF smoothly
     }, 300);
 }
 
-function shrinkContent() {
+function shrinkGif() {
+    const preview = document.getElementById("gif-preview");
+    const fullGif = document.getElementById("full-gif");
     const screen = document.querySelector(".screen");
-    const fullContent = document.getElementById("full-content");
-    const preview = document.getElementById("content-preview");
 
-    fullContent.classList.remove("show-content"); // Hide content smoothly
+    fullGif.classList.remove("show-content"); // Hide GIF smoothly
     setTimeout(() => {
-        fullContent.style.display = "none";
+        fullGif.style.display = "none";
         preview.style.display = "block"; // Show preview again
         screen.classList.remove("expanded"); // Shrink screen back
     }, 300);
